@@ -5,7 +5,7 @@ import ContentWrapper from "./ContentWrapper"
 
 function App() {
     return (
-        <div className='App'>
+        <div className='App muestra'>
             <SideBar/>
             <ContentWrapper/>
         </div>
