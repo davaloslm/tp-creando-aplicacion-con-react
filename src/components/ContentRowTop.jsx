@@ -1,7 +1,30 @@
 import img from "../assets/images/mandalorian.jpg"
 import React from 'react'
+import ContentRowMovies from "./ContentRowMovies"
 
 function ContentRowTop() {
+
+	const info = [
+        {
+            titulo: "Movies in Data Base",
+            color: "primary",
+            cifra: 21,
+            icono: "fas fa-film fa-2x text-gray-300"
+        },
+        {
+            titulo: "Total awards",
+            color: "success",
+            cifra: 79,
+            icono: "fas fa-award fa-2x text-gray-300"
+        },
+        {
+            titulo: "Actors quantity",
+            color: "warning",
+            cifra: 49,
+            icono: "fas fa-user fa-2x text-gray-300"
+        }
+    ]
+
     return (
         <div>
             <div className="container-fluid">
@@ -9,57 +32,7 @@ function ContentRowTop() {
 						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
 					</div>
 				
-					<div className="row">
-
-						<div className="col-md-4 mb-4">
-							<div className="card border-left-primary shadow h-100 py-2">
-								<div className="card-body">
-									<div className="row no-gutters align-items-center">
-										<div className="col mr-2">
-											<div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Movies in Data Base</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">21</div>
-										</div>
-										<div className="col-auto">
-											<i className="fas fa-film fa-2x text-gray-300"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-4 mb-4">
-							<div className="card border-left-success shadow h-100 py-2">
-								<div className="card-body">
-									<div className="row no-gutters align-items-center">
-										<div className="col mr-2">
-											<div className="text-xs font-weight-bold text-success text-uppercase mb-1"> Total awards</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">79</div>
-										</div>
-										<div className="col-auto">
-											<i className="fas fa-award fa-2x text-gray-300"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-4 mb-4">
-							<div className="card border-left-warning shadow h-100 py-2">
-								<div className="card-body">
-									<div className="row no-gutters align-items-center">
-										<div className="col mr-2">
-											<div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Actors quantity
-											</div>
-											<div className="h5 mb-0 font-weight-bold text-gray-800">49</div>
-										</div>
-										<div className="col-auto">
-											<i className="fas fa-user fa-2x text-gray-300"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<ContentRowMovies data={info}/>
 					
 	
 					<div className="row">
